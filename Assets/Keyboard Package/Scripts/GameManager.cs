@@ -1,35 +1,55 @@
 using UnityEngine;
 using TMPro;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-    [SerializeField] TextMeshProUGUI textBox;
-    [SerializeField] TextMeshProUGUI printBox;
+   public static GameManager Instance;
+   [SerializeField] TextMeshProUGUI textBox;
+   [SerializeField] TextMeshProUGUI printBox;
+   public DownloadableImage[] downloadableImages;
 
     private void Start()
-    {
-        Instance = this;
-        printBox.text = "";
-        textBox.text = "";
-    }
+   {
+      Instance = this;
+      printBox.text = "";
+      textBox.text = "";
+   }
 
-    public void DeleteLetter()
-    {
-        if(textBox.text.Length != 0) {
-            textBox.text = textBox.text.Remove(textBox.text.Length - 1, 1);
-        }
-    }
+   public void DeleteLetter()
+   {
+      if (textBox.text.Length != 0)
+      {
+         textBox.text = textBox.text.Remove(textBox.text.Length - 1, 1);
+      }
+   }
 
-    public void AddLetter(string letter)
-    {
-        textBox.text = textBox.text + letter;
-    }
+   public void AddLetter(string letter)
+   {
+      textBox.text = textBox.text + letter;
+   }
 
-    public void SubmitWord()
-    {
-        printBox.text = textBox.text;
-        textBox.text = "";
-        // Debug.Log("Text submitted successfully!");
-    }
+   public void SubmitWord()
+   {
+      printBox.text = textBox.text;
+      textBox.text = "";
+      // Debug.Log("Text submitted successfully!");
+      StartCoroutine(GetImages(printBox.text));
+   }
+
+
+   IEnumerator GetImages(string word)
+   {
+      DataContainer<List<string>> urls = new DataContainer<List<string>>();
+      yield return NounProjectMgr.GetImageUrls(word, urls, downloadableImages.Length);
+      for (int i = 0; i < downloadableImages.Length; ++i)
+      {
+         if (i >= urls.data.Count)
+            downloadableImages[i].Clear();
+         else
+            downloadableImages[i].SetURL(urls.data[i]);
+      }
+   }
 }
