@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DownloadableImage : MonoBehaviour
 {
-
+   public Color[] colors;
    SpriteRenderer spriteRenderer;
    Image uiImage;
    public Sprite empty;
@@ -43,6 +43,14 @@ public class DownloadableImage : MonoBehaviour
          spriteRenderer.sprite = sprite;
       if (uiImage)
          uiImage.sprite = sprite;
+   }
+
+   void SetColor(Color c)
+   {
+      if (spriteRenderer)
+         spriteRenderer.color = c;
+      if (uiImage)
+         uiImage.color = c;
    }
 
    private void Awake()
@@ -87,6 +95,7 @@ public class DownloadableImage : MonoBehaviour
             float h = downloadedTexture.height;
             downloadedSprite = Sprite.Create(downloadedTexture, new Rect(0, 0, w, h), new Vector2(.5f,.5f), 200);
             SetSprite(downloadedSprite);
+            SetColor(colors[Random.Range(0, colors.Length)]);
          }
       }
       downloadCoroutine = null;
