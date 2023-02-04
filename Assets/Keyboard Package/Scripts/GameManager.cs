@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
    [SerializeField] TextMeshProUGUI printBox;
    public DownloadableImage[] downloadableImages;
    public UnityEvent<string> OnWordSubmitted;
+   public VoiceController voiceController;
 
    public static GameManager I { get; private set; }
 
@@ -44,6 +45,9 @@ public class GameManager : MonoBehaviour
    public void AddLetter(string letter)
    {
       textBox.text = textBox.text + letter;
+
+      string speechText = textBox.text.ToLower();
+      voiceController.StartSpeaking(speechText);
    }
 
    public void SubmitWord()
