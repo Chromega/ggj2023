@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7ffd46e43ca58435dae3590f72811cc6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Gaegu
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: eababa635c7e046f5bffb022e24ccb05, type: 3}
+  - {fileID: 12800000, guid: 170276f920f8d409d967ba7355226ef2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
