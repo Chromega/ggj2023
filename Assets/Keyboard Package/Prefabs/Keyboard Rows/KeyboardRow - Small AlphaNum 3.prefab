@@ -28,8 +28,9 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8953898218181312329}
+  - {fileID: 8953898217731918705}
   - {fileID: 8953898218122842042}
   - {fileID: 8953898217110350045}
   - {fileID: 8953898217866206497}
@@ -37,7 +38,7 @@ RectTransform:
   - {fileID: 8953898217689352273}
   - {fileID: 8953898216803452879}
   - {fileID: 8953898217855576717}
-  - {fileID: 8953898217731918705}
+  - {fileID: 8953898218181312329}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -108,6 +109,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8953898217731918705}
   m_RootOrder: 1
@@ -155,46 +157,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4960970639467516632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8953898217731918706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
-  m_PreferredWidth: 73.703705
-  m_PreferredHeight: -1
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
---- !u!114 &4960970638969810921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8953898218181312330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
-  m_PreferredWidth: 81.666664
-  m_PreferredHeight: -1
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!1001 &4960970639373083411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4078654318110649154, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4078654318110649154, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
       propertyPath: m_AnchorMax.x
@@ -450,16 +412,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
---- !u!1 &8953898217731918706 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4078654318110649153, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
-  m_PrefabInstance: {fileID: 4960970639397822515}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8953898217731918705 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4078654318110649154, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
   m_PrefabInstance: {fileID: 4960970639397822515}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8953898217731918706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4078654318110649153, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
+  m_PrefabInstance: {fileID: 4960970639397822515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4960970639467516632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953898217731918706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 73.703705
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1001 &4960970639542054029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1241,7 +1223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4078654318110649154, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4078654318110649154, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1373,13 +1355,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
---- !u!1 &8953898218181312330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4078654318110649153, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
-  m_PrefabInstance: {fileID: 4960970640919761931}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8953898218181312329 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4078654318110649154, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
   m_PrefabInstance: {fileID: 4960970640919761931}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8953898218181312330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4078654318110649153, guid: 27de4f094cd29433aa58ccea79ea4885, type: 3}
+  m_PrefabInstance: {fileID: 4960970640919761931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4960970638969810921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953898218181312330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 81.666664
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1

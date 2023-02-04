@@ -21,9 +21,11 @@ public class KeyboardButtonController : MonoBehaviour
 
     public void SetContainerBorderColor(Color color) => containerBorderImage.color = color;
     public void SetContainerFillColor(Color color) => containerFillImage.color = color;
-    public void SetContainerTextColor(Color color) => containerText.color = color;
-    public void SetContainerActionTextColor(Color color) { 
-        containerActionText.color = color;
+    public void SetContainerTextColor(Color color) {
+        // containerText.color = color;
+    }
+    public void SetContainerActionTextColor(Color color) {
+        // containerActionText.color = color;
         containerIcon.color = color;
     }
 
@@ -34,7 +36,7 @@ public class KeyboardButtonController : MonoBehaviour
             Debug.Log(containerText.text + " is pressed");
         }
     }
-    public void DeleteLetter() { 
+    public void DeleteLetter() {
         if(GameManager.Instance != null) {
             GameManager.Instance.DeleteLetter();
         } else {
