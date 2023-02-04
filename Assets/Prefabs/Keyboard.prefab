@@ -179,10 +179,10 @@ RectTransform:
   m_Father: {fileID: 5387358086624473393}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -84.1}
-  m_SizeDelta: {x: 600, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 510}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6366936609769333561
 CanvasRenderer:
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COULDN'T FIND ASDF
+  m_text: Couldn't find asdf
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a73f533e527c4f7cad739643986ab43, type: 2}
   m_sharedMaterial: {fileID: 1279718418411757072, guid: 9a73f533e527c4f7cad739643986ab43, type: 2}
@@ -221,8 +221,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4282008783
+  m_fontColor: {r: 0.8113208, g: 0.26589683, b: 0.22579211, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
