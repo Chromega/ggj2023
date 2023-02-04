@@ -38,9 +38,18 @@ public class VoiceController : MonoBehaviour
 
     # region Text to Speech
 
+    string ttsQueue = "";
+    bool isSpeaking = false;
+
     public void StartSpeaking(string message)
     {
-        TextToSpeech.Instance.StartSpeak(message);
+        if (!isSpeaking) {
+            Debug.Log("Start speaking "+message);
+            TextToSpeech.Instance.StartSpeak(message);
+        } else {
+            ttsQueue = message;
+        }
+
     }
 
     public void StopSpeaking()
@@ -51,11 +60,18 @@ public class VoiceController : MonoBehaviour
     void OnSpeakStart()
     {
         Debug.Log("Talking started");
+        isSpeaking = true;
     }
 
     void OnSpeakStop()
     {
         Debug.Log("Talking stopped");
+        isSpeaking = false;
+
+        if (ttsQueue != "") {
+            StartSpeaking(ttsQueue);
+            ttsQueue = "";
+        }
     }
 
     #endregion
