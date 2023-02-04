@@ -3,14 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public class KeyboardButtonController : MonoBehaviour
+public class KeyboardButtonController : MonoBehaviour, IPointerDownHandler, IPointerExitHandler, IPointerUpHandler
 {
     [SerializeField] Image containerBorderImage;
     [SerializeField] Image containerFillImage;
     [SerializeField] Image containerIcon;
     [SerializeField] TextMeshProUGUI containerText;
     [SerializeField] TextMeshProUGUI containerActionText;
+
+    //Do this when the mouse is clicked over the selectable object this script is attached to.
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        //Debug.Log(this.gameObject.name + " Was Clicked.");
+        transform.Find("PressBackground").gameObject.SetActive(true);
+
+    }
+
+    //Do this when the mouse click on this selectable UI object is released.
+	public void OnPointerUp (PointerEventData eventData)
+	{
+		//Debug.Log ("The mouse click was released");
+        transform.Find("PressBackground").gameObject.SetActive(false);
+	}
+
+    //Do this when the cursor exits the rect area of this selectable UI object.
+	public void OnPointerExit (PointerEventData eventData)
+	{
+		//Debug.Log ("The cursor exited the selectable UI element.");
+	}
 
     private void Start() {
         SetContainerBorderColor(ColorDataStore.GetKeyboardBorderColor());
