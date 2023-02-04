@@ -488,7 +488,7 @@ PlayerSettings:
   enableCrashReportAPI: 0
   cameraUsageDescription: 
   locationUsageDescription: 
-  microphoneUsageDescription: 
+  microphoneUsageDescription: Get spelling hints using voice
   bluetoothUsageDescription: 
   switchNMETAOverride: 
   switchNetLibKey: 

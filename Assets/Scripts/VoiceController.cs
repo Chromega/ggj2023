@@ -87,7 +87,16 @@ public class VoiceController : MonoBehaviour
     }
 
     void OnFinalSpeechResult(string result) {
-        uiText.text = result;
+        Debug.Log("ASR result: "+result);
+        if (result != null && result != "nil") {
+            string firstWord = result.Split(" ")[0];
+            GameManager.Instance.ShowHintWord(firstWord.ToUpper());
+        } else {
+            string[] words = {"cat", "dog", "chicken", "pizza", "poop", "fish", "shark", "apple", "banana", "cookie", "candy", "dumpling", "orange", "jellyfish"};
+            string fillerWord = words[Random.Range(0, words.Length)];
+            GameManager.Instance.ShowHintWord(fillerWord.ToUpper());
+        }
+        //uiText.text = result;
     }
 
     void OnPartialSpeechResult(string result)
