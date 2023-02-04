@@ -10,9 +10,12 @@ public class GameManager : MonoBehaviour
    public static GameManager Instance;
    [SerializeField] TextMeshProUGUI textBox;
    [SerializeField] TextMeshProUGUI printBox;
+   [SerializeField] TextMeshProUGUI errorLabel;
    public DownloadableImage[] downloadableImages;
    public UnityEvent<string> OnWordSubmitted;
    public VoiceController voiceController;
+
+   Coroutine errorFadeCoroutine;
 
    public static GameManager I { get; private set; }
 
@@ -32,6 +35,7 @@ public class GameManager : MonoBehaviour
       Instance = this;
       printBox.text = "";
       textBox.text = "";
+      errorLabel.enabled = false;
    }
 
    public void DeleteLetter()
@@ -71,5 +75,31 @@ public class GameManager : MonoBehaviour
          else
             downloadableImages[i].SetURL(urls.data[i]);
       }
+   }
+
+   public void WordNotFound(string word)
+   {
+      errorLabel.text = "COULDN'T FIND " + word.ToUpper();
+      if (errorFadeCoroutine != null)
+         StopCoroutine(errorFadeCoroutine);
+      errorFadeCoroutine = StartCoroutine(WordNotFoundFade());
+   }
+
+   IEnumerator WordNotFoundFade()
+   {
+      errorLabel.enabled = true;
+      errorLabel.alpha = 1;
+
+      yield return new WaitForSeconds(1.0f);
+
+      float t = 0;
+      const float kTotalTime = 1f;
+      while (t < kTotalTime)
+      {
+         errorLabel.alpha = 1 - t / kTotalTime;
+         yield return null;
+         t += Time.deltaTime;
+      }
+      errorLabel.enabled = false;
    }
 }
