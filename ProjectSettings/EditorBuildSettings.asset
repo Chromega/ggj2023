@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Keyboard Package/Scenes/Demo 1 - Full Keyboard.unity
     guid: abd376551467646dd9a32bcae2b6d215
+  - enabled: 1
+    path: Assets/Scenes/main.unity
+    guid: 4c302ebfaafbd90459c1281cc054a185
   m_configObjects: {}
