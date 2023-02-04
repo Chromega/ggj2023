@@ -38,6 +38,7 @@ public class Scenario : MonoBehaviour
       {
          //Didn't find word :(
          Debug.LogError("Couldn't find it");
+         GameManager.I.WordNotFound(word);
       }
       else
       {
