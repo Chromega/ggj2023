@@ -45,7 +45,7 @@ public class DownloadableImage : MonoBehaviour
          uiImage.sprite = sprite;
    }
 
-   private void Start()
+   private void Awake()
    {
       spriteRenderer = GetComponent<SpriteRenderer>();
       uiImage = GetComponent<Image>();
@@ -85,7 +85,7 @@ public class DownloadableImage : MonoBehaviour
             downloadedTexture.Apply(false);
             float w = downloadedTexture.width;
             float h = downloadedTexture.height;
-            downloadedSprite = Sprite.Create(downloadedTexture, new Rect(0, 0, w, h), new Vector2(.5f,.5f));
+            downloadedSprite = Sprite.Create(downloadedTexture, new Rect(0, 0, w, h), new Vector2(.5f,.5f), 200);
             SetSprite(downloadedSprite);
          }
       }

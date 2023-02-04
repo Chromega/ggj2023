@@ -3,6 +3,7 @@ using TMPro;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,8 +11,22 @@ public class GameManager : MonoBehaviour
    [SerializeField] TextMeshProUGUI textBox;
    [SerializeField] TextMeshProUGUI printBox;
    public DownloadableImage[] downloadableImages;
+   public UnityEvent<string> OnWordSubmitted;
 
-    private void Start()
+   public static GameManager I { get; private set; }
+
+   private void Awake()
+   {
+      I = this;
+   }
+
+   private void OnDestroy()
+   {
+      if (I == this)
+         I = null;
+   }
+
+   private void Start()
    {
       Instance = this;
       printBox.text = "";
@@ -36,7 +51,8 @@ public class GameManager : MonoBehaviour
       printBox.text = textBox.text;
       textBox.text = "";
       // Debug.Log("Text submitted successfully!");
-      StartCoroutine(GetImages(printBox.text));
+      //StartCoroutine(GetImages(printBox.text));
+      OnWordSubmitted.Invoke(printBox.text);
    }
 
 
