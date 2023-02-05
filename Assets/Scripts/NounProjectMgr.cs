@@ -26,7 +26,7 @@ public class NounProjectMgr : MonoBehaviour
 
       foreach (var o in overrides)
       {
-         overrideDict[o.word] = o.sprite;
+         overrideDict[o.word.ToUpper()] = o.sprite;
       }
    }
 
@@ -50,6 +50,7 @@ public class NounProjectMgr : MonoBehaviour
 
    public static Sprite TryGetOverride(string word)
    {
+      word = word.ToUpper();
       if (I.overrideDict.ContainsKey(word))
          return I.overrideDict[word];
       else

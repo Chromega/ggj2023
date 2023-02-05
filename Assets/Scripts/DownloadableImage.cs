@@ -39,6 +39,7 @@ public class DownloadableImage : MonoBehaviour
 
    public void SetSprite(Sprite sprite)
    {
+      SetColor(colors[Random.Range(0, colors.Length)]);
       if (spriteRenderer)
          spriteRenderer.sprite = sprite;
       if (uiImage)
