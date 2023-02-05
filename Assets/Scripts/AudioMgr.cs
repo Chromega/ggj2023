@@ -9,6 +9,7 @@ public class AudioMgr : MonoBehaviour
    public AudioSource upper;
    public AudioSource intro;
    public AudioSource outro;
+   public AudioSource keyboardType;
 
    // Start is called before the first frame update
    void Start()

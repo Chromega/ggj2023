@@ -64,6 +64,7 @@ public class KeyboardButtonController : MonoBehaviour, IPointerDownHandler, IPoi
 
     public void AddLetter() {
         if(GameManager.Instance != null) {
+            GameManager.I.audioMgr.keyboardType.Play();
             GameManager.Instance.AddLetter(containerText.text);
         } else {
             Debug.Log(containerText.text + " is pressed");
