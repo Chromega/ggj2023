@@ -84,6 +84,14 @@ public class VoiceController : MonoBehaviour
 
     public void StopListening() {
         SpeechToText.Instance.StopRecording();
+#if UNITY_IPHONE
+        Debug.Log("stop listening iOS");
+#elif UNITY_ANDROID
+        Debug.Log("stop listening android");
+#else
+        Debug.Log("stop listening other");
+        OnFinalSpeechResult("nil");
+#endif
     }
 
     void OnFinalSpeechResult(string result) {

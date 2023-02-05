@@ -45,7 +45,7 @@ public class KeyboardController : MonoBehaviour
         splChars1.SetActive(false);
         splChars2.SetActive(false);
     }
-    
+
     public void ShowSmallLetters() {
         isSmallLettersShown = true;
 

@@ -49,7 +49,7 @@ public class KeyboardButtonController : MonoBehaviour, IPointerDownHandler, IPoi
         SetContainerBorderColor(ColorDataStore.GetKeyboardBorderColor());
         SetContainerFillColor(ColorDataStore.GetKeyboardFillColor());
         SetContainerTextColor(ColorDataStore.GetKeyboardTextColor());
-        SetContainerActionTextColor(ColorDataStore.GetKeyboardActionTextColor());
+        //SetContainerActionTextColor(ColorDataStore.GetKeyboardActionTextColor());
     }
 
     public void SetContainerBorderColor(Color color) => containerBorderImage.color = color;

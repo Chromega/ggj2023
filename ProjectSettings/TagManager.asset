@@ -31,6 +31,8 @@ TagManager:
   - y
   - i
   - Mic
+  - enter
+  - delete
   layers:
   - Default
   - TransparentFX
