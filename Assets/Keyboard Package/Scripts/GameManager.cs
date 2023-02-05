@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
    [SerializeField] TextMeshProUGUI textBox;
    [SerializeField] TextMeshProUGUI printBox;
    [SerializeField] TextMeshProUGUI errorLabel;
+   [SerializeField] TextMeshProUGUI hintLabel;
    public DownloadableImage[] downloadableImages;
    public UnityEvent<string> OnWordSubmitted;
    public VoiceController voiceController;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
       Instance = this;
       printBox.text = "";
       textBox.text = "";
+      hintLabel.text = "";
       errorLabel.enabled = false;
    }
 
@@ -54,6 +56,14 @@ public class GameManager : MonoBehaviour
       voiceController.StartSpeaking(speechText);
    }
 
+   public void onMicDown() {
+       voiceController.StartListening();
+   }
+
+    public void onMicUp() {
+        voiceController.StopListening();
+    }
+
    public void SubmitWord()
    {
       printBox.text = textBox.text;
@@ -61,6 +71,10 @@ public class GameManager : MonoBehaviour
       // Debug.Log("Text submitted successfully!");
       //StartCoroutine(GetImages(printBox.text));
       OnWordSubmitted.Invoke(printBox.text);
+   }
+
+   public void ShowHintWord(string text) {
+        hintLabel.text = text;
    }
 
 

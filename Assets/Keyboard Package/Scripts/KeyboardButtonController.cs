@@ -20,6 +20,11 @@ public class KeyboardButtonController : MonoBehaviour, IPointerDownHandler, IPoi
         //Debug.Log(this.gameObject.name + " Was Clicked.");
         transform.Find("PressBackground").gameObject.SetActive(true);
 
+        if (gameObject.tag == "Mic") {
+            Debug.Log("mic down");
+            GameManager.Instance.onMicDown();
+        }
+
     }
 
     //Do this when the mouse click on this selectable UI object is released.
@@ -27,6 +32,11 @@ public class KeyboardButtonController : MonoBehaviour, IPointerDownHandler, IPoi
 	{
 		//Debug.Log ("The mouse click was released");
         transform.Find("PressBackground").gameObject.SetActive(false);
+
+        if (gameObject.tag == "Mic") {
+            Debug.Log("mic up");
+            GameManager.Instance.onMicUp();
+        }
 	}
 
     //Do this when the cursor exits the rect area of this selectable UI object.
