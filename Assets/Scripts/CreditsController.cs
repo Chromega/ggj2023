@@ -4,21 +4,9 @@ using UnityEngine;
 
 public class CreditsController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void HideCredits()
     {
-        Debug.Log("hi");
-        //gameObject.SetActive(false);
+        Debug.Log("Hide Credits");
+        gameObject.SetActive(false);
     }
 }
