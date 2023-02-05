@@ -80,7 +80,7 @@ public class Scenario : MonoBehaviour
       if (currentNounIdx == 0)
       {
          GameManager.I.audioMgr.outro.Play();
-         yield return new WaitForSeconds(5f);
+         yield return new WaitForSeconds(3f);
          ScenarioMgr.I.NextScenario();
       }
    }
