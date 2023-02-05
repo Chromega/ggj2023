@@ -849,6 +849,8 @@ MonoBehaviour:
       m_Calls: []
   voiceController: {fileID: 2443087570909521928}
   timeInSecondsBeforeHint: 3
+  audioMgr: {fileID: 0}
+  scenarioMgr: {fileID: 0}
 --- !u!1 &5387358085630161169
 GameObject:
   m_ObjectHideFlags: 0
