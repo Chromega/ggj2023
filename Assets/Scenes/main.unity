@@ -2461,30 +2461,6 @@ PrefabInstance:
       propertyPath: scenarioMgr
       value: 
       objectReference: {fileID: 923314569}
-    - target: {fileID: 5387358085630161182, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5387358085630161182, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5387358085630161182, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5387358085630161182, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5387358085630161182, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5387358085630161182, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5387358086209731873, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
       propertyPath: m_Name
       value: Keyboard
@@ -4442,10 +4418,6 @@ PrefabInstance:
     - target: {fileID: 2744899212778371428, guid: 897de6d1cd8b04d128cdeaffdf10fff7, type: 3}
       propertyPath: m_Name
       value: StartScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 2744899212778371428, guid: 897de6d1cd8b04d128cdeaffdf10fff7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 897de6d1cd8b04d128cdeaffdf10fff7, type: 3}

@@ -79,7 +79,8 @@ public class Scenario : MonoBehaviour
       currentNounIdx %= downloadableImages.Count;
       if (currentNounIdx == 0)
       {
-         yield return new WaitForSeconds(3f);
+         GameManager.I.audioMgr.outro.Play();
+         yield return new WaitForSeconds(5f);
          ScenarioMgr.I.NextScenario();
       }
    }

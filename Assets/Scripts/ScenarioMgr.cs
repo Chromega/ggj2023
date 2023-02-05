@@ -50,6 +50,7 @@ public class ScenarioMgr : MonoBehaviour
 
    public void NextScenario()
    {
+
       ++currentScenarioIdx;
       currentScenarioIdx %= scenarios.Count;
       ActivateCurrentScenario();
