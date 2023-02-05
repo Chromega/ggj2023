@@ -17,6 +17,11 @@ public class SoupFloat : MonoBehaviour
    void FixedUpdate()
    {
       float speed = rb.velocity.magnitude;
+      if (speed == 0)
+      {
+         rb.velocity = new Vector2(Random.Range(-.01f, .01f), Random.Range(-.01f, .01f));
+         speed = rb.velocity.magnitude;
+      }
       Vector2 targetVel = rb.velocity * targetSpeed / speed;
       rb.velocity = Vector2.Lerp(rb.velocity, targetVel, 1-Mathf.Pow(.5f, Time.deltaTime));
    }

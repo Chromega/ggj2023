@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScenarioMgr : MonoBehaviour
 {
    public List<Scenario> scenarios;
    int currentScenarioIdx;
+
+   public UnityEvent<Scenario> OnScenarioChanged;
 
    public static ScenarioMgr I { get; private set; }
 
@@ -29,18 +32,24 @@ public class ScenarioMgr : MonoBehaviour
          scenarios[i].gameObject.SetActive(i == currentScenarioIdx);
       }
       GetCurrentScenario().Reset();
+      OnScenarioChanged.Invoke(GetCurrentScenario());
    }
    
-   Scenario GetCurrentScenario()
+   public Scenario GetCurrentScenario()
    {
       return scenarios[currentScenarioIdx];
    }
 
    public void NextScenario()
    {
-      GetCurrentScenario().gameObject.SetActive(false);
       ++currentScenarioIdx;
       currentScenarioIdx %= scenarios.Count;
-      GetCurrentScenario().gameObject.SetActive(true);
+      ActivateCurrentScenario();
+   }
+
+   private void Update()
+   {
+      if (Input.GetKeyDown(KeyCode.RightArrow))
+         NextScenario();
    }
 }

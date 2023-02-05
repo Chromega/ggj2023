@@ -9,6 +9,9 @@ public class Scenario : MonoBehaviour
    public Transform highlightXfm;
    List<DownloadableImage> downloadableImages = new List<DownloadableImage>();
    int currentNounIdx = 0;
+   public AudioClip sfxMid;
+   public AudioClip sfxPercussion;
+   public AudioClip sfxUpper;
 
    private void Start()
    {

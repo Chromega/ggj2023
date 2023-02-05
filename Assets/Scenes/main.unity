@@ -1146,6 +1146,9 @@ MonoBehaviour:
   - {fileID: 1862674319}
   nounPrefab: {fileID: 7141887213392892074, guid: f215566cf2420a7438c4a845055d09b0, type: 3}
   highlightXfm: {fileID: 155714631}
+  sfxMid: {fileID: 8300000, guid: 69efb3c7b4ec230409816f106159650e, type: 3}
+  sfxPercussion: {fileID: 8300000, guid: b562a412be08c85459bf8d4dc45fbf1c, type: 3}
+  sfxUpper: {fileID: 8300000, guid: ae00cd837787dc34197ce5dd507e59dd, type: 3}
 --- !u!4 &464824900
 Transform:
   m_ObjectHideFlags: 0
@@ -3259,6 +3262,9 @@ MonoBehaviour:
   - {fileID: 2050719209}
   - {fileID: 1850201954}
   - {fileID: 464824899}
+  OnScenarioChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &923314570
 Transform:
   m_ObjectHideFlags: 0
@@ -3899,6 +3905,9 @@ MonoBehaviour:
   - {fileID: 531559305}
   nounPrefab: {fileID: 7141887213392892074, guid: f215566cf2420a7438c4a845055d09b0, type: 3}
   highlightXfm: {fileID: 155714631}
+  sfxMid: {fileID: 8300000, guid: 682aaa82899bb1745a786fb0cca5693a, type: 3}
+  sfxPercussion: {fileID: 8300000, guid: 22ed2f3c0de56744fab23c266985c29b, type: 3}
+  sfxUpper: {fileID: 8300000, guid: 14b0740b380d35743b1d3536cd634633, type: 3}
 --- !u!4 &1850201955
 Transform:
   m_ObjectHideFlags: 0
@@ -4209,6 +4218,9 @@ MonoBehaviour:
   - {fileID: 696707653}
   nounPrefab: {fileID: 7141887213392892074, guid: f215566cf2420a7438c4a845055d09b0, type: 3}
   highlightXfm: {fileID: 155714631}
+  sfxMid: {fileID: 8300000, guid: 48ffba01ff920774f8d2a77203e87601, type: 3}
+  sfxPercussion: {fileID: 8300000, guid: 2a915b907e09fff40ba0f4a8e4e5b8d5, type: 3}
+  sfxUpper: {fileID: 8300000, guid: b97fb16afbfc35042b8b5e5be1886e7a, type: 3}
 --- !u!4 &2050719210
 Transform:
   m_ObjectHideFlags: 0
