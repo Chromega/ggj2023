@@ -65,6 +65,7 @@ public class Scenario : MonoBehaviour
             //Didn't find word :(
             Debug.LogError("Couldn't find it");
             GameManager.I.WordNotFound(word);
+            ScenarioMgr.I.BroadcastWordRejected();
             yield break;
          }
          else
@@ -75,12 +76,13 @@ public class Scenario : MonoBehaviour
          }
       }
       StartCoroutine(AnimateInWord(currentNounIdx));
+      ScenarioMgr.I.BroadcastWordAccepted(currentNounIdx);
       ++currentNounIdx;
       currentNounIdx %= downloadableImages.Count;
       if (currentNounIdx == 0)
       {
          GameManager.I.audioMgr.outro.Play();
-         yield return new WaitForSeconds(3f);
+         yield return new WaitForSeconds(5f);
          ScenarioMgr.I.NextScenario();
       }
    }

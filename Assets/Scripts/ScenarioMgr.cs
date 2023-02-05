@@ -9,6 +9,9 @@ public class ScenarioMgr : MonoBehaviour
    int currentScenarioIdx;
 
    public UnityEvent<Scenario> OnScenarioChanged;
+   public UnityEvent<int> OnWordAccepted;
+   public UnityEvent OnWordRejected;
+
 
    public static ScenarioMgr I { get; private set; }
 
@@ -60,5 +63,15 @@ public class ScenarioMgr : MonoBehaviour
    {
       if (Input.GetKeyDown(KeyCode.RightArrow))
          NextScenario();
+   }
+
+   public void BroadcastWordAccepted(int idx)
+   {
+      OnWordAccepted.Invoke(idx);
+   }
+   
+   public void BroadcastWordRejected()
+   {
+      OnWordRejected.Invoke();
    }
 }

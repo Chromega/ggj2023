@@ -10,11 +10,15 @@ public class AudioMgr : MonoBehaviour
    public AudioSource intro;
    public AudioSource outro;
    public AudioSource keyboardType;
+   public AudioSource[] wordAccepted;
+   public AudioSource wordRejected;
 
    // Start is called before the first frame update
    void Start()
    {
       ScenarioMgr.I.OnScenarioChanged.AddListener(ScenarioChanged);
+      ScenarioMgr.I.OnWordAccepted.AddListener(WordAccepted);
+      ScenarioMgr.I.OnWordRejected.AddListener(WordRejected);
       //ScenarioChanged(ScenarioMgr.I.GetCurrentScenario());
    }
 
@@ -37,5 +41,15 @@ public class AudioMgr : MonoBehaviour
 
       intro.clip = s.sfxIntro;
       intro.Play();
+   }
+
+   void WordAccepted(int idx)
+   {
+      wordAccepted[idx].Play();
+   }
+
+   void WordRejected()
+   {
+      wordRejected.Play();
    }
 }
