@@ -21,13 +21,23 @@ public class Scenario : MonoBehaviour
          spriteRoots[i].enabled = false;
       }
 
+
       GameManager.I.OnWordSubmitted.AddListener(AddNoun);
+   }
+
+   public void Reset()
+   {
+      for (int i = 0; i < downloadableImages.Count; ++i)
+      {
+         downloadableImages[i].gameObject.SetActive(false);
+      }
+      currentNounIdx = 0;
    }
 
    void AddNoun(string word)
    {
-
-      StartCoroutine(GetImages(word));
+      if (gameObject.activeSelf)
+         StartCoroutine(GetImages(word));
    }
 
    IEnumerator GetImages(string word)
@@ -43,12 +53,16 @@ public class Scenario : MonoBehaviour
       else
       {
          string randomUrl = urls.data[Random.Range(0, urls.data.Count)];
-         Debug.Log("AAA" + randomUrl);
          downloadableImages[currentNounIdx].gameObject.SetActive(true);
          downloadableImages[currentNounIdx].SetURL(randomUrl);
          StartCoroutine(AnimateInWord(currentNounIdx));
          ++currentNounIdx;
          currentNounIdx %= downloadableImages.Count;
+         if (currentNounIdx == 0)
+         {
+            yield return new WaitForSeconds(3f);
+            ScenarioMgr.I.NextScenario();
+         }
       }
    }
 
