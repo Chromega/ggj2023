@@ -153,7 +153,14 @@ public class GameManager : MonoBehaviour
    public void SubmitWord()
    {
       printBox.text = textBox.text;
+
+      // clear out the final hint
+      if (textBox.text == hintLabel.text) {
+        hintLabel.text = "";
+      }
+
       textBox.text = "";
+
       // Debug.Log("Text submitted successfully!");
       //StartCoroutine(GetImages(printBox.text));
       OnWordSubmitted.Invoke(printBox.text);
