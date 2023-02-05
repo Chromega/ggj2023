@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
    public VoiceController voiceController;
    public float timeInSecondsBeforeHint = 3.0f;
    private float timeSinceLastCorrectAction = 0.0f;
+   public AudioMgr audioMgr;
+   public ScenarioMgr scenarioMgr;
 
 
    Coroutine errorFadeCoroutine;
@@ -42,6 +44,10 @@ public class GameManager : MonoBehaviour
       textBox.text = "";
       hintLabel.text = "";
       errorLabel.enabled = false;
+   }
+
+   public void StartGame() {
+    scenarioMgr.StartScenarios();
    }
 
 

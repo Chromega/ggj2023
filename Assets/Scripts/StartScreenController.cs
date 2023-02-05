@@ -10,6 +10,7 @@ public class StartScreenController : MonoBehaviour
     {
         Debug.Log("Start Game");
         gameObject.SetActive(false);
+        GameManager.I.StartGame();
     }
 
     public void ShowCredits()

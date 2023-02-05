@@ -12,6 +12,8 @@ public class Scenario : MonoBehaviour
    public AudioClip sfxMid;
    public AudioClip sfxPercussion;
    public AudioClip sfxUpper;
+   public AudioClip sfxIntro;
+   public AudioClip sfxOutro;
 
    private void Start()
    {

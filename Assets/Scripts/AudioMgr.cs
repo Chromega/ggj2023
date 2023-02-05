@@ -7,12 +7,14 @@ public class AudioMgr : MonoBehaviour
    public AudioSource mid;
    public AudioSource percussion;
    public AudioSource upper;
+   public AudioSource intro;
+   public AudioSource outro;
 
    // Start is called before the first frame update
    void Start()
    {
       ScenarioMgr.I.OnScenarioChanged.AddListener(ScenarioChanged);
-      ScenarioChanged(ScenarioMgr.I.GetCurrentScenario());
+      //ScenarioChanged(ScenarioMgr.I.GetCurrentScenario());
    }
 
    void ScenarioChanged(Scenario s)
@@ -31,5 +33,8 @@ public class AudioMgr : MonoBehaviour
       mid.Play();
       percussion.Play();
       upper.Play();
+
+      intro.clip = s.sfxIntro;
+      intro.Play();
    }
 }

@@ -14,8 +14,16 @@ public class ScenarioMgr : MonoBehaviour
 
    private void Awake()
    {
+      // Enable credits
       I = this;
       currentScenarioIdx = Random.Range(0, scenarios.Count);
+      /*
+      ActivateCurrentScenario();
+      */
+   }
+
+   public void StartScenarios()
+   {
       ActivateCurrentScenario();
    }
 
@@ -34,7 +42,7 @@ public class ScenarioMgr : MonoBehaviour
       GetCurrentScenario().Reset();
       OnScenarioChanged.Invoke(GetCurrentScenario());
    }
-   
+
    public Scenario GetCurrentScenario()
    {
       return scenarios[currentScenarioIdx];

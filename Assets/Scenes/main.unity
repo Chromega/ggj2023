@@ -1233,6 +1233,8 @@ MonoBehaviour:
   sfxMid: {fileID: 8300000, guid: 69efb3c7b4ec230409816f106159650e, type: 3}
   sfxPercussion: {fileID: 8300000, guid: b562a412be08c85459bf8d4dc45fbf1c, type: 3}
   sfxUpper: {fileID: 8300000, guid: ae00cd837787dc34197ce5dd507e59dd, type: 3}
+  sfxIntro: {fileID: 8300000, guid: ffa20abd332774cd1822a746cd6b1428, type: 3}
+  sfxOutro: {fileID: 8300000, guid: d58af6a4a029642d695f625b8eccfe05, type: 3}
 --- !u!4 &464824900
 Transform:
   m_ObjectHideFlags: 0
@@ -2451,6 +2453,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5387358085445729420, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
+      propertyPath: audioMgr
+      value: 
+      objectReference: {fileID: 2098892818}
+    - target: {fileID: 5387358085445729420, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
+      propertyPath: scenarioMgr
+      value: 
+      objectReference: {fileID: 923314569}
     - target: {fileID: 5387358085630161182, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2478,10 +2488,6 @@ PrefabInstance:
     - target: {fileID: 5387358086209731873, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
       propertyPath: m_Name
       value: Keyboard
-      objectReference: {fileID: 0}
-    - target: {fileID: 5387358086209731873, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5387358086209731886, guid: ae5b3ebbc3055457a83dbdc6236991d3, type: 3}
       propertyPath: m_RootOrder
@@ -3992,6 +3998,8 @@ MonoBehaviour:
   sfxMid: {fileID: 8300000, guid: 682aaa82899bb1745a786fb0cca5693a, type: 3}
   sfxPercussion: {fileID: 8300000, guid: 22ed2f3c0de56744fab23c266985c29b, type: 3}
   sfxUpper: {fileID: 8300000, guid: 14b0740b380d35743b1d3536cd634633, type: 3}
+  sfxIntro: {fileID: 8300000, guid: c0f9ea0fb9f434b1687d721a5f117a22, type: 3}
+  sfxOutro: {fileID: 8300000, guid: 64c7cab052fb946d9a8aedf8b50719bf, type: 3}
 --- !u!4 &1850201955
 Transform:
   m_ObjectHideFlags: 0
@@ -4305,6 +4313,8 @@ MonoBehaviour:
   sfxMid: {fileID: 8300000, guid: 48ffba01ff920774f8d2a77203e87601, type: 3}
   sfxPercussion: {fileID: 8300000, guid: 2a915b907e09fff40ba0f4a8e4e5b8d5, type: 3}
   sfxUpper: {fileID: 8300000, guid: b97fb16afbfc35042b8b5e5be1886e7a, type: 3}
+  sfxIntro: {fileID: 8300000, guid: 896cbd36bf01e4fdc84fda23c5cbf234, type: 3}
+  sfxOutro: {fileID: 8300000, guid: 2c2ea62b6210b4a9caed8137f25c28e8, type: 3}
 --- !u!4 &2050719210
 Transform:
   m_ObjectHideFlags: 0
@@ -4327,6 +4337,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2098892818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7753738111190845709, guid: e1863d0a93d5a48df901745e289be3bc, type: 3}
+  m_PrefabInstance: {fileID: 635127749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5258dd0226e309843be3d2fce267ab12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2123414549
 PrefabInstance:
   m_ObjectHideFlags: 0
