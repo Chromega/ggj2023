@@ -79,4 +79,12 @@ public class Scenario : MonoBehaviour
       xfm.localRotation = Quaternion.identity;
       xfm.localScale = Vector3.one;
    }
+
+   private void Update()
+   {
+      for (int i = 0; i < downloadableImages.Count; ++i)
+      {
+         downloadableImages[i].GetComponent<SpriteRenderer>().sortingOrder = spriteRoots[i].sortingOrder;
+      }
+   }
 }
