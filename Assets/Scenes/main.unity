@@ -291,6 +291,123 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &178358337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 178358339}
+  - component: {fileID: 178358338}
+  m_Layer: 0
+  m_Name: NounMgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &178358338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178358337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0108eee73e8a34891e066d77ac6fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrides:
+  - word: ada
+    sprite: {fileID: -1676556931, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: luca
+    sprite: {fileID: 868738761, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: mark
+    sprite: {fileID: -1718739689, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: david
+    sprite: {fileID: -1253204704, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: rick
+    sprite: {fileID: 1139454141, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: boo
+    sprite: {fileID: -1252988306, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: sean
+    sprite: {fileID: 1908706879, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: xin
+    sprite: {fileID: 396824162, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: spiderman
+    sprite: {fileID: -1770496090, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: ethan
+    sprite: {fileID: 1562813942, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: emma
+    sprite: {fileID: 670079671, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: babyshark
+    sprite: {fileID: 1557416719, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: car
+    sprite: {fileID: 338842079, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: lion
+    sprite: {fileID: 867745153, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: book
+    sprite: {fileID: -833608744, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: cake
+    sprite: {fileID: 137145596, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: candy
+    sprite: {fileID: 755522120, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: lamp
+    sprite: {fileID: 2088417044, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: eye
+    sprite: {fileID: -898057301, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: tree
+    sprite: {fileID: -952223717, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: elmo
+    sprite: {fileID: -1952155049, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: fish
+    sprite: {fileID: 1317430461, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: flower
+    sprite: {fileID: 1287603492, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: phone
+    sprite: {fileID: -1229414565, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: poop
+    sprite: {fileID: 1842543937, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: boy
+    sprite: {fileID: 2082562325, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: girl
+    sprite: {fileID: -840524824, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: earth
+    sprite: {fileID: -636291825, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: moon
+    sprite: {fileID: 1722576934, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: pear
+    sprite: {fileID: 1516629886, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: dog
+    sprite: {fileID: -323746783, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: spellphabet
+    sprite: {fileID: 1296275525, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: bear
+    sprite: {fileID: -1882033623, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: apple
+    sprite: {fileID: 2126602385, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: sun
+    sprite: {fileID: 1821676034, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+  - word: bubble
+    sprite: {fileID: -869506419, guid: 95f32f8454bee624dba03aaebf452696, type: 3}
+--- !u!4 &178358339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178358337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2722609, y: 1.1149005, z: 0.0764085}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206429973
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +853,7 @@ Transform:
   m_GameObject: {fileID: 306036884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.48, y: 0.14, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050719210}
@@ -1654,7 +1771,7 @@ Transform:
   m_GameObject: {fileID: 696707652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.07, y: 3.61, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050719210}
@@ -2664,7 +2781,7 @@ Transform:
   m_GameObject: {fileID: 763503585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.03, y: 0.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050719210}
@@ -3083,7 +3200,7 @@ Transform:
   m_GameObject: {fileID: 860371718}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.33, y: 3.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050719210}
@@ -3634,7 +3751,7 @@ Transform:
   m_GameObject: {fileID: 1537117582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.47, y: 2.98, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050719210}
