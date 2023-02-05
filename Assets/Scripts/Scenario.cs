@@ -81,6 +81,7 @@ public class Scenario : MonoBehaviour
       currentNounIdx %= downloadableImages.Count;
       if (currentNounIdx == 0)
       {
+         GameManager.I.audioMgr.outro.clip = sfxOutro;
          GameManager.I.audioMgr.outro.Play();
          yield return new WaitForSeconds(5f);
          ScenarioMgr.I.NextScenario();
