@@ -3,10 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class NounProjectMgr
+public class NounProjectMgr : MonoBehaviour
 {
    private static string key = "abe8b9af979a4f57b674a97095ee090d";
    private static string secret = "91f0e90960114905af5cb61b6d610575";
+
+   public static NounProjectMgr I { get; private set; }
+
+
+   [System.Serializable]
+   public struct NounOverride
+   {
+      public string word;
+      public Sprite sprite;
+   }
+   public NounOverride[] overrides;
+   Dictionary<string, Sprite> overrideDict = new Dictionary<string, Sprite>();
+
+   void Awake()
+   {
+      I = this;
+
+      foreach (var o in overrides)
+      {
+         overrideDict[o.word] = o.sprite;
+      }
+   }
+
+   void OnDestroy()
+   {
+      if (I == this)
+         I = null;
+   }
 
    //Your code would look something like this
    /*
@@ -18,6 +46,15 @@ public class NounProjectMgr
    }*/
 
    //Call GetImageUrls from a coroutine.  Yield to it, and your data will be in result.  This is asynchronous.
+
+
+   public static Sprite TryGetOverride(string word)
+   {
+      if (I.overrideDict.ContainsKey(word))
+         return I.overrideDict[word];
+      else
+         return null;
+   }
 
    public static IEnumerator GetImageUrls(string word, DataContainer<List<string>> result, int count=3)
    {

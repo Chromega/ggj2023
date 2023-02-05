@@ -37,7 +37,7 @@ public class DownloadableImage : MonoBehaviour
       }
    }
 
-   void SetSprite(Sprite sprite)
+   public void SetSprite(Sprite sprite)
    {
       if (spriteRenderer)
          spriteRenderer.sprite = sprite;

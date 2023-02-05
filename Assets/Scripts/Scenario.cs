@@ -7,7 +7,7 @@ public class Scenario : MonoBehaviour
    public List<SpriteRenderer> spriteRoots;
    public DownloadableImage nounPrefab;
    public Transform highlightXfm;
-   List<DownloadableImage> downloadableImages= new List<DownloadableImage>();
+   List<DownloadableImage> downloadableImages = new List<DownloadableImage>();
    int currentNounIdx = 0;
 
    private void Start()
@@ -43,26 +43,39 @@ public class Scenario : MonoBehaviour
    IEnumerator GetImages(string word)
    {
       DataContainer<List<string>> urls = new DataContainer<List<string>>();
-      yield return NounProjectMgr.GetImageUrls(word, urls, 10);
-      if (urls.data.Count == 0)
+
+      Sprite o = NounProjectMgr.TryGetOverride(word);
+
+      if (o != null)
       {
-         //Didn't find word :(
-         Debug.LogError("Couldn't find it");
-         GameManager.I.WordNotFound(word);
+         downloadableImages[currentNounIdx].gameObject.SetActive(true);
+         downloadableImages[currentNounIdx].SetSprite(o);
       }
       else
       {
-         string randomUrl = urls.data[Random.Range(0, urls.data.Count)];
-         downloadableImages[currentNounIdx].gameObject.SetActive(true);
-         downloadableImages[currentNounIdx].SetURL(randomUrl);
-         StartCoroutine(AnimateInWord(currentNounIdx));
-         ++currentNounIdx;
-         currentNounIdx %= downloadableImages.Count;
-         if (currentNounIdx == 0)
+
+         yield return NounProjectMgr.GetImageUrls(word, urls, 10);
+         if (urls.data.Count == 0)
          {
-            yield return new WaitForSeconds(3f);
-            ScenarioMgr.I.NextScenario();
+            //Didn't find word :(
+            Debug.LogError("Couldn't find it");
+            GameManager.I.WordNotFound(word);
+            yield break;
          }
+         else
+         {
+            string randomUrl = urls.data[Random.Range(0, urls.data.Count)];
+            downloadableImages[currentNounIdx].gameObject.SetActive(true);
+            downloadableImages[currentNounIdx].SetURL(randomUrl);
+         }
+      }
+      StartCoroutine(AnimateInWord(currentNounIdx));
+      ++currentNounIdx;
+      currentNounIdx %= downloadableImages.Count;
+      if (currentNounIdx == 0)
+      {
+         yield return new WaitForSeconds(3f);
+         ScenarioMgr.I.NextScenario();
       }
    }
 
